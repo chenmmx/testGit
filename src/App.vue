@@ -1,24 +1,15 @@
 <template>
   <div id="app">
-    <mt-header title="宿舍智能管理系统系统"></mt-header>
     <router-view></router-view>
     <nav class="mui-bar mui-bar-tab">
-      <a class="mui-tab-item mui-active" href="#tabbar">
+      <router-link class="mui-tab-item" to="/home">
         <span class="mui-icon mui-icon-home"></span>
         <span class="mui-tab-label">首页</span>
-      </a>
-      <a class="mui-tab-item" href="#tabbar-with-chat">
-        <span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
-        <span class="mui-tab-label">消息</span>
-      </a>
-      <a class="mui-tab-item" href="#tabbar-with-contact">
-        <span class="mui-icon mui-icon-contact"></span>
-        <span class="mui-tab-label">通讯录</span>
-      </a>
-      <a class="mui-tab-item" href="#tabbar-with-map">
+      </router-link>
+      <router-link class="mui-tab-item" :to="{name:'usersets'}">
         <span class="mui-icon mui-icon-gear"></span>
-        <span class="mui-tab-label">设置</span>
-      </a>
+        <span class="mui-tab-label">用户设置</span>
+      </router-link>
     </nav>
   </div>
 </template>
